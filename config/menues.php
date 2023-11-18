@@ -7,6 +7,10 @@ return [
             'text'=> 'Home',
         ],
 
+        [
+            'href'=>'about',
+            'text'=> 'About',
+        ],
     ],
 
     'product' => [

@@ -9,6 +9,10 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+main{
+    min-height: calc(100vh - 121px);
+}
+
 
 .container{
   width: 80%;

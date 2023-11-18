@@ -13,7 +13,10 @@ $product = config('menues.product');
             <img  class="modello due" src="{{$item['secondaryImage']}}" alt="{{$item['marca']}}">
             </div>
             <div class="lable">
-            <span  class="discount">{{ $item['discount'] }}</span>
+                @if ($item['discount'] ==! null)
+                    <span  class="discount">{{ $item['discount'] }}</span>
+                @endif
+
             <span  class="green">Sostenibilità</span>
             </div>
             <span class="hearts">&hearts;</span>

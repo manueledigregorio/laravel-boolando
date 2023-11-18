@@ -7,7 +7,7 @@ $menuPerson = config('menues.menuPerson')
           <ul class="menu">
             @foreach ($menuPerson as $person )
             <li>
-                <a href="{{$person['href']}}">{{$person['text']}}</a>
+                <a href="{{route($person['href'])}}">{{$person['text']}}</a>
             </li>
             @endforeach
 

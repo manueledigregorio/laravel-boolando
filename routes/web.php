@@ -20,3 +20,21 @@ Route::get('/', function() {
 Route::get('/about', function() {
     return view('about');
 })->name('about');
+
+Route::get('/dettaglio-prodotto/{slug}', function ($slug) {
+
+    // prendo l'eleco dei prodotti
+    $products = config('menues.product');
+
+    // estraggo dall'array di prodotti l'elemento con slug = $slug
+    $product_array = array_filter($products, fn($product) => $product['slug'] === $slug);
+
+
+    // prendo il primo elemento di questo array
+    $product = $product_array[array_key_first($product_array)];
+
+
+    return view('productDetail', compact('product'));
+})->name('productDetail');
+
+
